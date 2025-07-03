@@ -36,13 +36,13 @@
 		gtag('config', 'UA-54521513-2');
 	</script>
 	<script>
-		function copyrightYear() {
-			var d = new Date();
-			var y = d.getFullYear();
-			document.getElementById("copyright").innerHTML = 'Copyright &copy; ' + y + ' ServiceForceNow';
-		}
-
-		copyrightYear();
+		  function copyrightYear() {
+		    var y = new Date().getFullYear();
+		    document.getElementById("copyright").innerHTML = 'Copyright &copy; ' + y + ' ServiceForceNow';
+		  }
+		
+		  // Call the function when the page finishes loading
+		  window.onload = copyrightYear;
 
 		function sendEmail() 
 		{
@@ -101,7 +101,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h1 class="section-heading text-uppercase">Certified Partnership Services & Solutions</h1>
+				<h1 class="section-heading text-uppercase">Shipping Enterprise Solutions since 2016</h1>
 				<h3 class="section-subheading text-muted">Current Offerings</h3>
 			</div>
 		</div>
@@ -210,7 +210,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
-				<span class="copyright">Copyright &copy; ServiceForceNow 2020</span>
+				<span id="copyright"></span>
 			</div>
           <!-- TODO Social
           <div class="col-md-4">
